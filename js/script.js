@@ -48,6 +48,9 @@ form.addEventListener("submit", function (e) {
     ) {
       errorMsg[0].parentElement.classList.add("show-error");
       errorMsg[0].textContent = "Must be a valid date";
+    } else if (Number(inputDate.value) != NaN) {
+      errorMsg[0].parentElement.classList.add("show-error");
+      errorMsg[0].textContent = "Must be a number";
     } else {
       inputDate.parentElement.classList.remove("show-error");
     }
@@ -57,6 +60,9 @@ form.addEventListener("submit", function (e) {
     } else if (Number(inputMonth.value) > 12 || Number(inputMonth.value) <= 0) {
       errorMsg[1].parentElement.classList.add("show-error");
       errorMsg[1].textContent = "Must be a valid month";
+    } else if (Number(inputMonth.value) != NaN) {
+      errorMsg[1].parentElement.classList.add("show-error");
+      errorMsg[1].textContent = "Must be a number";
     } else {
       inputMonth.parentElement.classList.remove("show-error");
     }
@@ -69,6 +75,9 @@ form.addEventListener("submit", function (e) {
     } else if (Number(inputYear.value) <= 0) {
       errorMsg[2].parentElement.classList.add("show-error");
       errorMsg[2].textContent = "Must be a valid year";
+    } else if (Number(inputYear.value) != NaN) {
+      errorMsg[2].parentElement.classList.add("show-error");
+      errorMsg[2].textContent = "Must be a number";
     } else {
       inputYear.parentElement.classList.remove("show-error");
     }
