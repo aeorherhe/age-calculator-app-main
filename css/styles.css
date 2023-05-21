@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* general variables */
+  --border: 2px solid lavender;
+  --boxShadow: 0 0 50px lavender;
+  --boxShadow2: 0px 0px 50px rgba(150, 150, 150, 0.3);
+  --transition: all 0.3s linear;
+
+  /* variables for this project */
+  --Light-grey: hsl(0, 0%, 86%);
+  --Light-red: hsl(0, 100%, 67%);
+  --Off-black: hsl(0, 0%, 8%);
+  --Off-white: hsl(0, 0%, 94%);
+  --purple: hsl(259, 100%, 65%);
+  --Smokey-grey: hsl(0, 1%, 44%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  display: grid;
+  font-family: "Poppins", "Open Sans", Arial, Helvetica, sans-serif;
+  height: 100vh;
+  place-items: center;
+}
+
+.main {
+  border-radius: 20px 20px 150px 20px;
+  box-shadow: var(--boxShadow2);
+  padding: 3rem;
+  width: 80vw;
+}
+
+.form {
+  border-bottom: 2px solid var(--Smokey-grey);
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 2rem 0 4rem;
+  position: relative;
+  width: 100%;
+}
+
+label {
+  color: var(--Smokey-grey);
+  display: block;
+  margin: 10px 0;
+  text-transform: uppercase;
+}
+
+input {
+  border-radius: 5px;
+  border: 1px solid var(--Light-grey);
+  cursor: pointer;
+  display: block;
+  font-size: 32px;
+  font-weight: bold;
+  outline: none;
+  padding: 10px 20px;
+  width: 100%;
+}
+
+input:focus {
+  border: 1px solid var(--purple);
+  box-shadow: none;
+}
+
+/* remove default number slider */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.error-msg {
+  color: var(--Light-red);
+  display: none;
+  font-size: 11px;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+/* for javascript */
+.show-error input {
+  border: 1px solid var(--Light-red);
+}
+
+.show-error label {
+  color: var(--Light-red);
+}
+
+.show-error .error-msg {
+  display: block;
+}
+
+h1 {
+  font-size: 74px;
+  font-style: italic;
+  font-weight: 800;
+}
+
+.btn {
+  background-color: var(--purple);
+  border-radius: 50%;
+  border: none;
+  bottom: -40px;
+  color: var(--purple);
+  cursor: pointer;
+  font-size: 14px;
+  outline: none;
+  padding: 15px;
+  position: absolute;
+  right: 0;
+  transition: var(--transition);
+}
+
+.btn:hover {
+  background-color: var(--Off-black);
+}
+
+span {
+  color: blueviolet;
+  font-style: italic;
+  margin-right: 10px;
+}
+
+/* setting media queries */
+@media screen and (max-width: 400px) {
+  .main {
+    padding: 1rem;
+    width: 90vw;
+  }
+  input {
+    font-size: 0.8rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .main {
+    padding: 2rem;
+    width: 90vw;
+  }
+  input {
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  .btn {
+    right: 38%;
+  }
+
+  .error-msg {
+    font-size: 9px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .main {
+    padding: 2rem;
+    width: 90vw;
+  }
+
+  .btn {
+    right: 38%;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .main {
+    width: 700px;
+    transition: var(--transition);
+  }
+
+  h1 {
+    font-size: 6rem;
+  }
+
+  .form-group {
+    width: 25%;
+    transition: var(--transition);
+  }
+}
+
+/* footer styles */
+footer img {
+  height: 100%;
+  width: 100%;
+}
+
+.my-profile {
+  align-items: center;
+  background-color: hsl(259, 87%, 57%);
+  color: white;
+  display: flex;
+  font-size: 14px;
+  gap: 20px;
+  justify-content: center;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+.my-profile > a {
+  color: hsl(51, 79%, 45%);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.my-profile-icons a {
+  color: var(--White);
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 5px;
+}

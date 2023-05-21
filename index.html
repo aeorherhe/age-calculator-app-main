@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <title>Age calculator app</title>
+  </head>
+  <body>
+    <main>
+      <div class="main">
+        <section class="user-input">
+          <form action="/" class="form">
+            <div class="form-group">
+              <label class="day" for="day"> day </label>
+              <input
+                type="text"
+                inputmode="numeric"
+                id="day"
+                name="day"
+                placeholder="DD"
+                minlength="1"
+                maxlength="2"
+              />
+              <small class="error-msg invalidDateInput"></small>
+            </div>
+            <div class="form-group">
+              <label class="month" for="month"> month </label>
+              <input
+                type="text"
+                inputmode="numeric"
+                id="month"
+                name="month"
+                placeholder="MM"
+                minlength="1"
+                maxlength="2"
+              />
+              <small class="error-msg invalidMonthInput"></small>
+            </div>
+            <div class="form-group">
+              <label class="year" for="year"> year </label>
+              <input
+                type="text"
+                inputmode="numeric"
+                id="year"
+                name="year"
+                placeholder="YYYY"
+                minlength="4"
+                maxlength="4"
+              />
+              <small class="error-msg invalidYearInput"></small>
+            </div>
+            <button class="btn" type="submit">
+              <img src="./assets/images/icon-arrow.svg" alt="" />
+            </button>
+          </form>
+        </section>
+        <section class="age-display">
+          <h1><span class="output-year output">- -</span>years</h1>
+          <h1><span class="output-month output">- -</span>months</h1>
+          <h1><span class="output-date output">- -</span>days</h1>
+        </section>
+      </div>
+    </main>
+    <footer class="my-profile">
+      Challenge by :
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor....
+      </a>
+      Coded by :
+      <a href="https://aeorherhe.netlify.app" target="_blank"
+        >Abraham Orherhe</a
+      >
+      <div class="my-profile-icons">
+        <a href="https://www.facebook.com/aeorherhe" target="_blank"
+          ><i class="fa-brands fa-facebook-f"></i
+        ></a>
+        <a href="https://www.instagram.com/aeorherhe/" target="_blank"
+          ><i class="fa-brands fa-twitter"></i
+        ></a>
+        <a href="https://twitter.com/aeorherhe" target="_blank"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+      </div>
+    </footer>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
