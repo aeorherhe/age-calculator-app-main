@@ -31,8 +31,6 @@ function isFormValid(input) {
   });
 }
 
-console.log(typeof NaN);
-
 // add event listener to form
 form.addEventListener("submit", function (e) {
   e.preventDefault();
