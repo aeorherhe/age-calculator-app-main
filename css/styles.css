@@ -173,6 +173,10 @@ span {
     width: 90vw;
   }
 
+  h1 {
+    font-size: 3.5rem;
+  }
+
   .btn {
     right: 38%;
   }
